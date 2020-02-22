@@ -1,0 +1,15 @@
+{
+        "manifest_version": 2,
+      
+        "name": "Exercise Extension",
+        "description": "Extension to help me play around with all things associated with creating a chrome extension",
+        "version": "1.0",
+      
+        "browser_action": {
+         "default_icon": "gearIcon.png",
+         "default_popup": "popup.html"
+        },
+        "permissions": [
+         "activeTab"
+         ]
+      }
