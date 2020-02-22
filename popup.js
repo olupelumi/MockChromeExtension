@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         this.responseText;
                   }
                 };
-                xhttp.open("GET", "http://riceowls.com/services/calendar.ashx?type=rss", true);
+                //xhttp.open("GET", "https://cors-anywhere.herokuapp.com/http://riceowls.com/services/calendar.ashx?type=rss", true);
+                xhttp.open("GET", "https://cors-anywhere.herokuapp.com/http://riceowls.com/services/scores.aspx", true);
                 xhttp.send();
         }, false);
       }, false);
