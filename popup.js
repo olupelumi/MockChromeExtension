@@ -26,13 +26,26 @@ document.addEventListener('DOMContentLoaded', function() {
                                 x = xmlDoc.documentElement.childNodes;
                                 console.log(x);
                                 console.log(x.length);
+                                let count = 1;
                                 for (i = 1; i < x.length-1; i+=2) {
-                                        let sportType = x[i].children[4].innerHTML;
-                                        if (sportType == "WBB"){
-                                        txt += x[i].children[5].innerHTML + ": " + sportType + " vs " + x[i].children[13].innerHTML + "<br>"
+                                        console.log(i);
+                                        console.log(x[i].childNodes.item(7));
+                                        console.log(x[i].childNodes);
+                                        let childNodeLst = x[i].childNodes;
+                                        // for (valIdx = 0;i < childNodeLst.length;i++){
+                                                // if (childNodeLst[valIdx].)
+
+                                        // }
+
+                                        console.log(sportType);
+                                        if (sportType == "BB"){
+                                                //the date plus the sport type plus the opponent
+                                                //console.log(count);
+                                                txt += x[i].children.namedItem("date").innerHTML + ": " + sportType + " vs " + x[i].children.namedItem("opponent").innerHTML + "<br>"
                                         }
+                                        count +=1;
                                 }
-                                console.log(txt);
+                                //console.log(txt);
                                 document.getElementById("demo").innerHTML = txt;
                 
 
@@ -65,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+ 
 
 // function loadXMLDoc() {
 //         var xhttp = new XMLHttpRequest();
