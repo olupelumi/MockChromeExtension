@@ -27,15 +27,22 @@ document.addEventListener('DOMContentLoaded', function() {
                                 console.log(x);
                                 console.log(x.length);
                                 let count = 1;
+                                let sportType;
+                                //iterating over all the games in the stream
                                 for (i = 1; i < x.length-1; i+=2) {
-                                        console.log(i);
-                                        console.log(x[i].childNodes.item(7));
-                                        console.log(x[i].childNodes);
+                                        //console.log(i);
+                                       // console.log(x[i].childNodes.item(7));
+                                        //console.log(x[i].childNodes);
                                         let childNodeLst = x[i].childNodes;
-                                        // for (valIdx = 0;i < childNodeLst.length;i++){
-                                                // if (childNodeLst[valIdx].)
-
-                                        // }
+                                        //iteration over the information 
+                                        for (valIdx = 0;i < childNodeLst.length;i++){ //iterating through childNode
+                                                console.log("id: " + childNodeLst[valIdx].id);
+                                                if (childNodeLst[valIdx].id == "sport_abbrev"){
+                                                        console.log("does this check ever work?");
+                                                        console.log("sport_abbrev: " + childNodeLst[valIdx].id);
+                                                        sportType = childNodeLst[valIdx].innerHTML;
+                                                }
+                                        }
 
                                         console.log(sportType);
                                         if (sportType == "BB"){
